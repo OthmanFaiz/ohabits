@@ -8,9 +8,6 @@
     align-items: center;
     padding: 10px;
 
-    width: 395px;
-    height: 90px;
-
     /* Neutral/50 */
 
     background: #FCFCFC;
@@ -18,7 +15,7 @@
 
     border: 2px solid #FCFBFB;
     border-radius: 8px;
-
+    margin-bottom: 8px;
 }
 
 .date {
@@ -26,4 +23,35 @@
     flex-direction: row;
     align-items: center;
     margin-right: auto;
+}
+
+.day_and_month {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.day {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: -0.04em;
+    color: #1E0C02;
+    padding: 0;
+    margin: 0;
+}
+
+.month {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    /* identical to box height, or 122% */
+    
+    letter-spacing: -0.02em;
+    color: #1E0C02;
+
+    padding: 0;
+    margin: 0;
 }

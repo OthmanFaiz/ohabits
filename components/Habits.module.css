@@ -1,0 +1,87 @@
+.container {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    
+    /* Neutral/50 */
+    
+    background: #FCFCFC;
+    /* Neutral/100 */
+    
+    border: 2px solid #FCFBFB;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.habits_title {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+
+    /* Primary/900 */
+
+    color: #1E0C02;
+    margin: 0 auto;
+}
+
+.habits {
+    margin-top: 10px;
+}
+
+.habit{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+.habit_left, .habit_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.habit_left {
+    width: 212px;
+}
+
+.habit_name {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.02em;
+    
+    /* Neutral / 700 */
+    
+    color: #5F6666;    
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 12px;
+    height: 12px;
+    border: 2px solid #2A3433;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.checkbox:checked {
+    background: #FAB791;
+}

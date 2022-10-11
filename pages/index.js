@@ -3,6 +3,7 @@ import Header from '../components/layout/Header'
 import classes from '../styles/Home.module.css'
 
 import Date from '../components/Date'
+import Habits from '../components/Habits'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <div className={classes.container}>
         <Date />
+        <Habits />
       </div>
     </>
     )
