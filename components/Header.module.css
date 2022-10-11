@@ -1,0 +1,18 @@
+.container {
+    background: #FAB791;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    border-bottom: 2px solid #DEE2E6;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: -0.04em;
+    color: #F4F5F7;
+}
