@@ -1,0 +1,98 @@
+.container {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    
+    /* Neutral/50 */
+    
+    background: #FCFCFC;
+    /* Neutral/100 */
+    
+    border: 2px solid #FCFBFB;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.workout_title {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+
+    /* Primary/900 */
+
+    color: #1E0C02;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wight_input {
+    width: 144px;
+    height: 20px;
+
+    border: none;
+    outline: none;
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: #5F6666;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+        
+    /* Neutral / 700 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.today_workout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.today_title {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: 0.02em;
+
+    color: #000000;
+    margin-right: 10px;
+}
+
+.dropdown {
+    width: 80%;
+    height: 20px;
+
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: 0.02em;
+
+    /* Neutral / 700 */
+
+    color: #5F6666;
+}

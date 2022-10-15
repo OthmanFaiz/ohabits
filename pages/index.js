@@ -4,6 +4,7 @@ import classes from '../styles/Home.module.css'
 
 import Date from '../components/Date'
 import Habits from '../components/Habits'
+import Workout from '../components/Workout'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <div className={classes.container}>
         <Date />
         <Habits />
+        <Workout />
       </div>
     </>
     )
