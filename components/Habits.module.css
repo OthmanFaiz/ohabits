@@ -64,9 +64,14 @@
     letter-spacing: 0.02em;
     
     /* Neutral / 700 */
+
+    
+    /* text-decoration: line-through; */
     
     color: #5F6666;    
 }
+
+
 
 .checkbox {
     -webkit-appearance: none;

@@ -81,7 +81,7 @@ export default function Habits() {
             <textarea className={classes.textarea} placeholder="Type what's in your mind ..." />
 
             <div className={`${classes.habits_title} ${classes.line}`}>
-                How is the day
+                Rate your day
             </div>
             <div className={classes.day_flex}>
                 <div className={classes.day_radio}>
