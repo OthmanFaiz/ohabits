@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 10px;
     
     /* Neutral/50 */
@@ -37,6 +38,7 @@
     align-items: center;
 }
 
+
 .wight_input {
     width: 144px;
     height: 20px;
@@ -67,6 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .today_title {
@@ -85,6 +88,11 @@
     width: 80%;
     height: 20px;
 
+    border: none;
+    outline: none;
+    background: #EAEBEB;
+
+
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
@@ -95,4 +103,130 @@
     /* Neutral / 700 */
 
     color: #5F6666;
+}
+
+.workout_plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5F6666;
+    border-radius: 8px;
+    width: 328px;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.workout_plan_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.workout_plan_title {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: 0.02em;
+
+    color: #000000;
+}
+
+.workout_plan_input {
+    width: 70px;
+    height: 20px;
+
+    border: none;
+    outline: none;
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: #5F6666;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+        
+    /* Neutral / 700 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+}
+
+.workout_plan_input_new {
+    width: 90px;
+    margin-right: 10px;
+}
+
+.workout_plan_section_add {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.cardio {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrap {
+    margin-right: auto;
+}
+
+.cardio_name_input {
+    width: 90px;
+    height: 20px;
+
+    border: none;
+    outline: none;
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: #5F6666;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+        
+    /* Neutral / 700 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.cardio_min_input {
+    width: 50px;
+    height: 20px;
+
+    border: none;
+    outline: none;
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: #5F6666;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+        
+    /* Neutral / 700 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+}
+
+.gap_top {
+    margin-top: 10px;
 }
