@@ -76,7 +76,7 @@ export default function Habits() {
                 <div className={classes.todo_add}>
                     <input type="text" className={classes.input} placeholder="Today's tasks ..." />
                     <div className={classes.todo_add_icon}>
-                        <Image src="/images/svg/add.svg" width={16} height={16} />
+                        <Image src="/images/svg/add.svg" width={24} height={24} />
                     </div>
                 </div>
             </div>
