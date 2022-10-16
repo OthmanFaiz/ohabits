@@ -9,7 +9,7 @@ export default function Workout() {
                 <input type="text" placeholder='your wight today' className={classes.wight_input} />
             </div>
             <div className={classes.today_workout}>
-                <span className={classes.today_title}>Today's plan</span>
+                <span className={classes.today_title}>Today&apos;s plan</span>
                 <select className={classes.dropdown}>
                     <option value="1">Legs & ABS</option>
                     <option value="2">Pull</option>

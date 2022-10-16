@@ -47,7 +47,7 @@ export default function Habits() {
             </div>
 
             <div className={classes.habits_title}>
-                Todo's
+                Todo&apos;s
             </div>
             <div className={classes.habits}>
                 <div className={classes.habit}>
@@ -76,7 +76,7 @@ export default function Habits() {
             </div>
 
             <div className={classes.habits_title}>
-                Today's note
+                Today&apos;s note
             </div>
             <textarea className={classes.textarea} placeholder="Type what's in your mind ..." />
 
