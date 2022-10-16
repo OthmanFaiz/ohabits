@@ -25,10 +25,10 @@ export default function Workout() {
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <div className={classes.workout_plan_add}>
-                        <Image src='/images/svg/add.svg' width={16} height={16} />
+                        <Image src='/images/svg/add.svg' alt='add' width={16} height={16} />
                     </div>
                     <div className={classes.workout_plan_remove}>
-                        <Image src='/images/svg/remove.svg' width={16} height={16} />
+                        <Image src='/images/svg/remove.svg' alt='remove' width={16} height={16} />
                     </div>
                 </div>
                 <div className={classes.workout_plan_section}>
@@ -39,10 +39,10 @@ export default function Workout() {
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <div className={classes.workout_plan_add}>
-                        <Image src='/images/svg/add.svg' width={16} height={16} />
+                        <Image src='/images/svg/add.svg' alt='add' width={16} height={16} />
                     </div>
                     <div className={classes.workout_plan_remove}>
-                        <Image src='/images/svg/remove.svg' width={16} height={16} />
+                        <Image src='/images/svg/remove.svg' alt='remove' width={16} height={16} />
                     </div>
                 </div>
                 <div className={classes.workout_plan_section}>
@@ -53,10 +53,10 @@ export default function Workout() {
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <div className={classes.workout_plan_add}>
-                        <Image src='/images/svg/add.svg' width={16} height={16} />
+                        <Image src='/images/svg/add.svg' alt='add' width={16} height={16} />
                     </div>
                     <div className={classes.workout_plan_remove}>
-                        <Image src='/images/svg/remove.svg' width={16} height={16} />
+                        <Image src='/images/svg/remove.svg' alt='remove' width={16} height={16} />
                     </div>
                 </div>
                 <div className={classes.workout_plan_section}>
@@ -67,16 +67,16 @@ export default function Workout() {
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <input type="text" placeholder='120kg x 12' className={classes.workout_plan_input} />
                     <div className={classes.workout_plan_add}>
-                        <Image src='/images/svg/add.svg' width={16} height={16} />
+                        <Image src='/images/svg/add.svg' alt='add' width={16} height={16} />
                     </div>
                     <div className={classes.workout_plan_remove}>
-                        <Image src='/images/svg/remove.svg' width={16} height={16} />
+                        <Image src='/images/svg/remove.svg' alt='remove' width={16} height={16} />
                     </div>
                 </div>
                 <div className={classes.workout_plan_section_add}>
                     <input type="text" placeholder='new workout' className={`${classes.workout_plan_input} ${classes.workout_plan_input_new}`} />
                     <div className={classes.workout_plan_add}>
-                        <Image src='/images/svg/add.svg' width={16} height={16} />
+                        <Image src='/images/svg/add.svg' alt='add' width={16} height={16} />
                     </div>
                 </div>
             </div>
@@ -89,10 +89,10 @@ export default function Workout() {
                     <input type="text" placeholder='40 min' className={classes.cardio_min_input} />
                 </div>
                 <div className={classes.workout_plan_add}>
-                    <Image src='/images/svg/add.svg' width={16} height={16} />
+                    <Image src='/images/svg/add.svg' alt='add' width={16} height={16} />
                 </div>
                 <div className={classes.workout_plan_remove}>
-                    <Image src='/images/svg/remove.svg' width={16} height={16} />
+                    <Image src='/images/svg/remove.svg' alt='remove' width={16} height={16} />
                 </div>
             </div>
         </div>
