@@ -3,48 +3,59 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 export default function Habits() {
+    const [habits, setHabits] = useState([
+        { name: 'Reading', done: false }, 
+        { name: 'Learn Dutch', done: false },
+        { name: 'Fast Typing', done: false },
+        { name: 'Work on startup', done: false },
+        { name: 'Learn Rust', done: false }
+    ]);
+
+    const handleHabit = (index) => {
+        const newHabits = [...habits];
+        newHabits[index].done = !newHabits[index].done;
+        setHabits(newHabits);
+        }
+
     return (
         <div className={classes.container}>
             <div className={classes.habits_title}>
                 Habits
             </div>
             <div className={classes.habits}>
-                <div className={classes.habit}>
-                    <label className={classes.habit_left}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Reading
+                {habits.map((habit, index) => {
+                    if(index === habits.length - 1 && index % 2 === 0) {
+                        return (
+                        <div className={classes.habit}>
+                            <label className={classes.habit_left}>
+                                <input type="checkbox" className={classes.checkbox} onClick={() => handleHabit(index)} />
+                                <div className={`${classes.habit_name} ${habit.done && classes.habit_name_crossed}`}>
+                                    {habit.name}
+                                </div>
+                            </label>
                         </div>
-                    </label>
-                    <label className={classes.habit_right}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Learn Dutch
-                        </div>
-                    </label>
-                </div>
-                <div className={classes.habit}>
-                    <label className={classes.habit_left}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Fast Typing
-                        </div>
-                    </label>
-                    <label className={classes.habit_right}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Work on startup
-                        </div>
-                    </label>
-                </div>
-                <div className={classes.habit}>
-                    <label className={classes.habit_left}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Learn Rust
-                        </div>
-                    </label>
-                </div>
+                        )
+                    }
+                    else if(index === 0 || index % 2 === 0) {
+                        return (
+                            <div className={classes.habit}>
+                                <label className={classes.habit_left}>
+                                    <input type="checkbox" className={classes.checkbox} onClick={() => handleHabit(index)} />
+                                    <div className={`${classes.habit_name} ${habit.done && classes.habit_name_crossed}`}>
+                                        {habit.name}
+                                    </div>
+                                </label>
+                                <label className={classes.habit_right}>
+                                    <input type="checkbox" className={classes.checkbox} onClick={() => handleHabit(index + 1)} />
+                                    <div className={`${classes.habit_name} ${habits[index + 1].done && classes.habit_name_crossed}`}>
+                                        {habits[index + 1].name}
+                                    </div>
+                                </label>
+                            </div>
+                        )
+                    }
+                }
+                )}
             </div>
 
             <div className={classes.habits_title}>

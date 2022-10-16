@@ -66,9 +66,12 @@
     /* Neutral / 700 */
 
     
-    /* text-decoration: line-through; */
     
     color: #5F6666;    
+}
+
+.habit_name_crossed {
+    text-decoration: line-through;
 }
 
 
