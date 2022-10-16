@@ -22,8 +22,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 2px;
-    gap: 5px;
+    padding: 1px;
+    gap: 4px;
 
     width: 82px;
     height: 40px;
@@ -36,7 +36,6 @@
 
 .profile_image {
     border-radius: 50px;
-    overflow: hidden;
 }
 
 .profile_name {

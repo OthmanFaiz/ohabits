@@ -14,9 +14,7 @@ export default function Header() {
             <div>
                 {loggedIn ? (
                     <div className={classes.logged_in}>
-                        <div className={classes.profile_image}>
-                            <Image src="/images/othman.jpg" objectFit="cover" alt="user" width={36} height={36} />
-                        </div>
+                            <Image className={classes.profile_image} src="/images/othman.jpg" objectFit="cover" alt="user" width={50} height={50} />
                         <div className={classes.profile_name}>Othman Alomair</div>
                     </div>
                 ) : (
