@@ -1,5 +1,6 @@
 import classes from './Habits.module.css'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function Habits() {
     return (
@@ -72,7 +73,12 @@ export default function Habits() {
                         </div>
                     </label>
                 </div>
-                <input type="text" className={classes.input} placeholder="Today's tasks ..." />
+                <div className={classes.todo_add}>
+                    <input type="text" className={classes.input} placeholder="Today's tasks ..." />
+                    <div className={classes.todo_add_icon}>
+                        <Image src="/images/svg/add.svg" width={16} height={16} />
+                    </div>
+                </div>
             </div>
 
             <div className={classes.habits_title}>

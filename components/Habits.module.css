@@ -91,8 +91,13 @@
     background: #FAB791;
 }
 
+.todo_add {
+    display: flex;
+    margin-bottom: 11px;
+}
+
 .input {
-    width: 355px;
+    width: 340px;
     height: 20px;
     padding: 0px 4px;
 
@@ -111,8 +116,8 @@
     
     background: #EAEBEB;
     border-radius: 4px;
+    margin-right: 10px;
 
-    margin-bottom: 11px;
 }
 
 .textarea {
