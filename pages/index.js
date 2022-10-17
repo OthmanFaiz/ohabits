@@ -4,9 +4,10 @@ import classes from '../styles/Home.module.css'
 
 import { useEffect, useState } from 'react'
 
-import Date from '../components/Date'
+import Dateform from '../components/Dateform'
 import Habits from '../components/Habits'
 import Workout from '../components/Workout'
+import Calendar from '../components/Calendar'
 
 export default function Home() {
       const [habits, setHabits] = useState([
@@ -25,6 +26,14 @@ export default function Home() {
 
     const [done, setDone] = useState(0);
 
+    const [note, setNote] = useState('');
+
+    const [rate, setRate] = useState(0);
+
+    const [date, setDate] = useState(new Date());
+
+    const [showCalendar, setShowCalendar] = useState(false);
+
     const handleHabit = (index) => {
         const newHabits = [...habits];
         newHabits[index].done = !newHabits[index].done;
@@ -42,6 +51,18 @@ export default function Home() {
         setTodos(newTodos);
     }
 
+    const noteHandler = (e) => {
+        setNote(e.target.value);
+    }
+
+    const handleRate = (e) => {
+        setRate(+e.target.id);
+    }
+
+    const handleCalendar = () => {
+        setShowCalendar(!showCalendar);
+    }
+
     useEffect(() => {
         let count = 0;
         habits.forEach(habit => {
@@ -53,6 +74,7 @@ export default function Home() {
         const percentage = Math.round((count / (habits.length + todos.length)) * 100);
         setDone(percentage);
     },[habits, todos]);
+
   return (
     <>
       <Head>
@@ -62,8 +84,9 @@ export default function Home() {
       </Head>
       <Header />
       <div className={classes.container}>
-        <Date done={done} />
-        <Habits habits={habits} todos={todos} handleHabit={handleHabit} handleTodo={handleTodo} addTodo={addTodo} />
+        <Dateform handleCalendar={handleCalendar} date={date} done={done} />
+        {showCalendar && <Calendar date={date} />}
+        <Habits habits={habits} todos={todos} handleHabit={handleHabit} handleTodo={handleTodo} addTodo={addTodo} noteHandler={noteHandler} handleRate={handleRate} />
         <Workout />
       </div>
     </>

@@ -31,6 +31,7 @@
     align-items: flex-start;
     margin-right: 8px;
     margin-left: 8px;
+    cursor: pointer;
 }
 
 .day {

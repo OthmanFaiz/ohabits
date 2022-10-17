@@ -2,7 +2,7 @@ import classes from './Habits.module.css'
 import Image from 'next/image'
 import { useRef } from 'react'
 
-export default function Habits({ habits, todos, handleHabit, handleTodo, addTodo }) {
+export default function Habits({ habits, todos, handleHabit, handleTodo, addTodo, noteHandler ,handleRate }) {
     const NewTodoRef = useRef();
 
     const submitHandler = (e) => {
@@ -104,12 +104,14 @@ export default function Habits({ habits, todos, handleHabit, handleTodo, addTodo
             <div className={classes.habits_title}>
                 Today&apos;s note
             </div>
-            <textarea className={classes.textarea} placeholder="Type what's in your mind ..." />
+            <form>
+                <textarea className={classes.textarea} onChange={noteHandler} placeholder="Type what's in your mind ..." />
+            </form>
 
             <div className={`${classes.habits_title} ${classes.line}`}>
                 Rate your day
             </div>
-            <div className={classes.day_flex}>
+            <form onChange={handleRate} className={classes.day_flex}>
                 <div className={classes.day_radio}>
                     <input className={classes.radio} type="radio" name="day" id="1" />
                     <label htmlFor="1">1</label>
@@ -150,7 +152,7 @@ export default function Habits({ habits, todos, handleHabit, handleTodo, addTodo
                     <input className={classes.radio} type="radio" name="day" id="10" />
                     <label htmlFor="10">10</label>
                 </div>
-            </div>
+            </form>
         </div>
     )
 }

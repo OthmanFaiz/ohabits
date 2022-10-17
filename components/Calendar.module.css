@@ -1,0 +1,63 @@
+.container {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    /* Neutral/50 */
+
+    background: #FCFCFC;
+    /* Neutral/100 */
+
+    border: 2px solid #FCFBFB;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.month_year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.month_year_title {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    /* identical to box height, or 122% */
+    
+    letter-spacing: -0.02em;
+    
+    /* Primary/900 */
+    
+    color: #1E0C02;
+    margin: 0;
+}
+
+.weekdays {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.weekday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 117% */
+
+    letter-spacing: 0.08em;
+
+    color: #000000;
+}
