@@ -26,7 +26,7 @@ export default function Habits() {
                 {habits.map((habit, index) => {
                     if(index === habits.length - 1 && index % 2 === 0) {
                         return (
-                        <div className={classes.habit}>
+                        <div className={classes.habit} key={index}>
                             <label className={classes.habit_left}>
                                 <input type="checkbox" className={classes.checkbox} onClick={() => handleHabit(index)} />
                                 <div className={`${classes.habit_name} ${habit.done && classes.habit_name_crossed}`}>
@@ -38,7 +38,7 @@ export default function Habits() {
                     }
                     else if(index === 0 || index % 2 === 0) {
                         return (
-                            <div className={classes.habit}>
+                            <div className={classes.habit} key={index}>
                                 <label className={classes.habit_left}>
                                     <input type="checkbox" className={classes.checkbox} onClick={() => handleHabit(index)} />
                                     <div className={`${classes.habit_name} ${habit.done && classes.habit_name_crossed}`}>
@@ -87,7 +87,7 @@ export default function Habits() {
                 <div className={classes.todo_add}>
                     <input type="text" className={classes.input} placeholder="Today's tasks ..." />
                     <div className={classes.todo_add_icon}>
-                        <Image src="/images/svg/add.svg" width={24} height={24} />
+                        <Image src="/images/svg/add.svg" alt='add' width={24} height={24} />
                     </div>
                 </div>
             </div>
