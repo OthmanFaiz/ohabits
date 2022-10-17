@@ -1,21 +1,8 @@
 import classes from './Habits.module.css'
-import { useState } from 'react'
 import Image from 'next/image'
 
-export default function Habits() {
-    const [habits, setHabits] = useState([
-        { name: 'Reading', done: false }, 
-        { name: 'Learn Dutch', done: false },
-        { name: 'Fast Typing', done: false },
-        { name: 'Work on startup', done: false },
-        { name: 'Learn Rust', done: false }
-    ]);
+export default function Habits({ habits, todos, handleHabit, handleTodo }) {
 
-    const handleHabit = (index) => {
-        const newHabits = [...habits];
-        newHabits[index].done = !newHabits[index].done;
-        setHabits(newHabits);
-        }
 
     return (
         <div className={classes.container}>
@@ -62,28 +49,39 @@ export default function Habits() {
                 Todo&apos;s
             </div>
             <div className={classes.habits}>
-                <div className={classes.habit}>
-                    <label className={classes.habit_left}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Call Othman
+            {todos.map((todo, index) => {
+                    if(index === todos.length - 1 && index % 2 === 0) {
+                        return (
+                        <div className={classes.habit} key={index}>
+                            <label className={classes.habit_left}>
+                                <input type="checkbox" className={classes.checkbox} onClick={() => handleTodo(index)} />
+                                <div className={`${classes.habit_name} ${todo.done && classes.habit_name_crossed}`}>
+                                    {todo.name}
+                                </div>
+                            </label>
                         </div>
-                    </label>
-                    <label className={classes.habit_right}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Buy milk
-                        </div>
-                    </label>
-                </div>
-                <div className={classes.habit}>
-                    <label className={classes.habit_left}>
-                        <input type="checkbox" className={classes.checkbox} />
-                        <div className={classes.habit_name}>
-                            Reroll in discord
-                        </div>
-                    </label>
-                </div>
+                        )
+                    }
+                    else if(index === 0 || index % 2 === 0) {
+                        return (
+                            <div className={classes.habit} key={index}>
+                                <label className={classes.habit_left}>
+                                    <input type="checkbox" className={classes.checkbox} onClick={() => handleTodo(index)} />
+                                    <div className={`${classes.habit_name} ${todo.done && classes.habit_name_crossed}`}>
+                                        {todo.name}
+                                    </div>
+                                </label>
+                                <label className={classes.habit_right}>
+                                    <input type="checkbox" className={classes.checkbox} onClick={() => handleTodo(index + 1)} />
+                                    <div className={`${classes.habit_name} ${todos[index + 1].done && classes.habit_name_crossed}`}>
+                                        {todos[index + 1].name}
+                                    </div>
+                                </label>
+                            </div>
+                        )
+                    }
+                }
+                )}
                 <div className={classes.todo_add}>
                     <input type="text" className={classes.input} placeholder="Today's tasks ..." />
                     <div className={classes.todo_add_icon}>

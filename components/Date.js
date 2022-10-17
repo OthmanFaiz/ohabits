@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import Pie from './Pie'
 
-export default function Date() {
+export default function Date({done}) {
     return (
         <div className={classes.container}>
             <div className={classes.date}>
@@ -18,7 +18,7 @@ export default function Date() {
                     <Image src="/images/svg/ar-right.svg" alt='arrow right' width={32} height={32} />
                 </div>
             </div>
-            <Pie percentage={30} colour="#F2600C" />
+            <Pie percentage={done} colour="#F2600C" />
         </div>
     )
 }
