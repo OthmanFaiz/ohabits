@@ -1,8 +1,19 @@
 import classes from './Habits.module.css'
 import Image from 'next/image'
+import { useRef } from 'react'
 
-export default function Habits({ habits, todos, handleHabit, handleTodo }) {
+export default function Habits({ habits, todos, handleHabit, handleTodo, addTodo }) {
+    const NewTodoRef = useRef();
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+        if (NewTodoRef.current.value === '') return;
+        addTodo({
+            name: NewTodoRef.current.value,
+            done: false
+        });
+        NewTodoRef.current.value = '';
+    }
 
     return (
         <div className={classes.container}>
@@ -82,12 +93,12 @@ export default function Habits({ habits, todos, handleHabit, handleTodo }) {
                     }
                 }
                 )}
-                <div className={classes.todo_add}>
-                    <input type="text" className={classes.input} placeholder="Today's tasks ..." />
-                    <div className={classes.todo_add_icon}>
+                <form onSubmit={submitHandler} className={classes.todo_add}>
+                    <input type="text" className={classes.input} id="newTodo" ref={NewTodoRef} placeholder="Today's tasks ..." />
+                    <button className={classes.todo_add_icon}>
                         <Image src="/images/svg/add.svg" alt='add' width={24} height={24} />
-                    </div>
-                </div>
+                    </button>
+                </form>
             </div>
 
             <div className={classes.habits_title}>

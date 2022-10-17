@@ -185,3 +185,8 @@
 .radio:checked {
     background: #FAB791;
 }
+
+.todo_add_icon {
+    border: 0;
+    background: none;
+}

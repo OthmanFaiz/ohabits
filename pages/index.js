@@ -37,6 +37,11 @@ export default function Home() {
         setTodos(newTodos);
     }
 
+    const addTodo = (todo) => {
+        const newTodos = [...todos, todo];
+        setTodos(newTodos);
+    }
+
     useEffect(() => {
         let count = 0;
         habits.forEach(habit => {
@@ -58,7 +63,7 @@ export default function Home() {
       <Header />
       <div className={classes.container}>
         <Date done={done} />
-        <Habits habits={habits} todos={todos} handleHabit={handleHabit} handleTodo={handleTodo} />
+        <Habits habits={habits} todos={todos} handleHabit={handleHabit} handleTodo={handleTodo} addTodo={addTodo} />
         <Workout />
       </div>
     </>
