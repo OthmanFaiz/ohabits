@@ -24,6 +24,17 @@ export default function Calender({date}) {
                 <div className={classes.weekday}>T</div>
                 <div className={classes.weekday}>F</div>
             </div>
+            <div className={classes.days}>
+                {Array.from({length: date.getDay()}, (_, i) => (
+                    <div className={classes.day} key={i}></div>
+                ))}
+                {Array.from({length: new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()}, (_, i) => {
+                    return (i + 1) === new Date().getDate() ? (
+                    <div className={`${classes.day} ${classes.today}`} key={i + 1}>{i + 1}</div>
+                ) : (
+                    <div className={classes.day} key={i}>{i + 1}</div>
+                )})}
+            </div>
         </div>
     )
 }
