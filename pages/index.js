@@ -24,6 +24,8 @@ export default function Home() {
         { name: 'Reroll in discord', done: false }
     ]);
 
+    const [workout, setWorkout] = useState(null);
+
     const [done, setDone] = useState(0);
 
     const [note, setNote] = useState('');
@@ -61,6 +63,10 @@ export default function Home() {
 
     const handleCalendar = () => {
         setShowCalendar(!showCalendar);
+    }
+
+    const handleWorkout = (workout) => {
+        setWorkout(workout);
     }
 
     useEffect(() => {
