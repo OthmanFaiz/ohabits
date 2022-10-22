@@ -2,12 +2,12 @@ import classes from './Header.module.css';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function Header() {
+export default function Header({handleSidebar}) {
     const [loggedIn, setLoggedIn] = useState(true);
     
     return (
         <div className={classes.container}>
-            <div>
+            <div onClick={handleSidebar}>
                 <Image src="/images/svg/bm.svg" alt="menu" width={24} height={24} />
             </div>
             <div className={classes.logo}>Ohabits</div>

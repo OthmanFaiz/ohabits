@@ -8,6 +8,7 @@ import Dateform from '../components/Dateform'
 import Habits from '../components/Habits'
 import Workout from '../components/Workout'
 import Calendar from '../components/Calendar'
+import Sidebar from '../components/Sidebar'
 
 export default function Home() {
       const [habits, setHabits] = useState([
@@ -25,16 +26,14 @@ export default function Home() {
     ]);
 
     const [workout, setWorkout] = useState(null);
-
     const [done, setDone] = useState(0);
-
     const [note, setNote] = useState('');
-
     const [rate, setRate] = useState(0);
-
     const [date, setDate] = useState(new Date());
-
     const [showCalendar, setShowCalendar] = useState(false);
+    const [showSidebar, setShowSidebar] = useState(false);
+
+
 
     const handleHabit = (index) => {
         const newHabits = [...habits];
@@ -65,8 +64,13 @@ export default function Home() {
         setShowCalendar(!showCalendar);
     }
 
-    const handleWorkout = (workout) => {
-        setWorkout(workout);
+    const handleWorkout = (e) => {
+        e.preventDefault();
+        console.log(e.target.name, e.target.value);
+    }
+
+    const handleSidebar = () => {
+        setShowSidebar(!showSidebar);
     }
 
     useEffect(() => {
@@ -88,13 +92,18 @@ export default function Home() {
         <meta name="description" content="Othman habits tracker" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header handleSidebar={handleSidebar} />
       <div className={classes.container}>
+      {!showSidebar && 
+      <>
         <Dateform handleCalendar={handleCalendar} date={date} done={done} />
         {showCalendar && <Calendar date={date} />}
         <Habits habits={habits} todos={todos} handleHabit={handleHabit} handleTodo={handleTodo} addTodo={addTodo} noteHandler={noteHandler} handleRate={handleRate} />
-        <Workout />
-      </div>
+        <Workout workout={workout} handleWorkout={handleWorkout} />
+      </>
+        }
+        {showSidebar && <Sidebar />}
+        </div>
     </>
     )
 }

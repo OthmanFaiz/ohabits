@@ -10,6 +10,6 @@ It is a simple app that allows me to track my daily activities and habits.
 - [ ] add states to the home page
     - [x] add states for the habits
     - [ ] add states for the workout
-- [ ] add the side menu page
+- [x] add the side menu page
 - [ ] add view and edit mode for the home page
 - [ ] add a settings page

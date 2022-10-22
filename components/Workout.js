@@ -1,19 +1,22 @@
 import classes from './Workout.module.css'
 import Image from 'next/image'
+import { useState } from 'react'
 
-export default function Workout() {
+export default function Workout({ workout, handleWorkout }) {
+
     return (
+        <form onChange={handleWorkout}>
         <div className={classes.container}>
             <div className={`${classes.workout_title} ${classes.flex}`}>
                 Workout
-                <input type="text" placeholder='your wight' className={classes.wight_input} />
+                <input name='wight' type="text" placeholder='your wight' className={classes.wight_input} />
             </div>
             <div className={classes.today_workout}>
                 <span className={classes.today_title}>Today&apos;s plan</span>
-                <select className={classes.dropdown}>
-                    <option value="1">Legs &amp; ABS</option>
-                    <option value="2">Pull</option>
-                    <option value="3">Legs</option>
+                <select name='plan' className={classes.dropdown}>
+                    <option value="Legs &amp; ABS">Legs &amp; ABS</option>
+                    <option value="Pull">Pull</option>
+                    <option value="Legs">Legs</option>
                 </select>
             </div>
             <div className={classes.workout_plan}>
@@ -21,9 +24,9 @@ export default function Workout() {
                     <span className={classes.workout_plan_title}>
                         Squat
                     </span>
-                    <input type="text" placeholder='120 x 12' className={classes.workout_plan_input} />
-                    <input type="text" placeholder='120 x 12' className={classes.workout_plan_input} />
-                    <input type="text" placeholder='120 x 12' className={classes.workout_plan_input} />
+                    <input name='rep 1' type="text" placeholder='120 x 12' className={classes.workout_plan_input} />
+                    <input name='rep 2' type="text" placeholder='120 x 12' className={classes.workout_plan_input} />
+                    <input name='rep 3' type="text" placeholder='120 x 12' className={classes.workout_plan_input} />
                     <div className={classes.workout_plan_add}>
                         <Image src='/images/svg/add.svg' alt='add' width={16} height={16} />
                     </div>
@@ -96,5 +99,6 @@ export default function Workout() {
                 </div>
             </div>
         </div>
+        </form>
     )
 }
