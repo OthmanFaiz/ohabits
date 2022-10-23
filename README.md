@@ -6,7 +6,9 @@ It is a simple app that allows me to track my daily activities and habits.
 - [x] fix the zoom issue on the home page for the iOS
     - [x] trying the 16px input's
 - [ ] add a calendar view
-    - [ ] fix the spacing in the calendar view
+    - [x] fix the spacing in the calendar view
+    - [ ] fix the starting date of the calendar view
+    - [ ] add visial indicators for the days that have activities
 - [ ] add states to the home page
     - [x] add states for the habits
     - [ ] add states for the workout
