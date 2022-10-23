@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.box {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    
+    /* Neutral/50 */
+    
+    background: #FCFCFC;
+    /* Neutral/100 */
+    
+    border: 2px solid #FCFBFB;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    /* identical to box height, or 118% */
+    
+    letter-spacing: -0.04em;
+    
+    /* Primary/900 */
+    
+    color: #1E0C02;
+}
+
+.workout_box {
+    display: flex;
+    align-items: center;
+    background: #FDE7DA;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 8px;
+}
+
+.workout_box_title {
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height, or 121% */
+    
+    
+    /* Primary/900 */
+    
+    color: #1E0C02;
+}
+
+.workout_inputbox {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.workout_input {
+    width: 340px;
+    padding: 4px 4px;
+
+    border: none;
+    outline: none;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 12px;
+    color: #5F6666;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.02em;
+    
+    /* Neutral / 700 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+    margin-right: 10px;
+
+}

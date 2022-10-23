@@ -20,10 +20,12 @@ export default function Sidebar({handleSidebar}) {
                     <div className={classes.sidebar_box_title}>Habits</div>
                 </div>
                 </Link>
+                <Link href="/workout">
                 <div className={classes.sidebar_box}>
                     <Image src="/images/svg/export.svg" alt="workout" width={32} height={32} />
                     <div className={classes.sidebar_box_title}>Workout plans</div>
                 </div>
+                </Link>
                 <div className={classes.sidebar_box}>
                     <Image src="/images/svg/profile1.svg" alt="profile" width={32} height={32} />
                     <div className={classes.sidebar_box_title}>Profile page</div>

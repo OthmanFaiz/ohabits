@@ -15,3 +15,13 @@ It is a simple app that allows me to track my daily activities and habits.
 - [x] add the side menu page
 - [ ] add view and edit mode for the home page
 - [ ] add a settings page
+- [ ] habits setting page
+    - [x] add a new habit
+    - [x] edit a habit
+    - [x] delete a habit
+    - [ ] add functionality to the habit
+- [ ] workout setting page
+    - [x] add a new workout
+    - [ ] edit a workout
+    - [ ] delete a workout
+    - [ ] add functionality to the workout
