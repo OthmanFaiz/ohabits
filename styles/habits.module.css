@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.box {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    
+    /* Neutral/50 */
+    
+    background: #FCFCFC;
+    /* Neutral/100 */
+    
+    border: 2px solid #FCFBFB;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    /* identical to box height, or 118% */
+    
+    letter-spacing: -0.04em;
+    
+    /* Primary/900 */
+    
+    color: #1E0C02;
+}
+
+.habit_name {
+    display: flex;
+    align-items: center;
+    background: #FDE7DA;
+    border-radius: 8px;
+    min-height: 36px;
+}
+
+.days {
+    display: flex;
+    width: 244px;
+    justify-content: space-between;
+}
+
+.day {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 117% */
+    
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    
+    color: #000000;
+    
+}
+
+.habit_name_title {
+    width: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height, or 121% */
+    
+    
+    /* Primary/900 */
+    
+    color: #1E0C02;
+}
+
+.empty {
+    min-width: 36px;
+}
+
+.habit_habitbox {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.habit_title {
+    width: 100px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 117% */
+    
+    
+    color: #000000;
+}
+
+.checkboxs {
+    display: flex;
+    width: 244px;
+    justify-content: space-between;
+}
+
+.x {
+    min-width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 12px;
+    height: 12px;
+    border: 2px solid #2A3433;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.checkbox:checked {
+    background: #FAB791;
+}
+
+.habit_input {
+    width: 340px;
+    padding: 4px 4px;
+
+    border: none;
+    outline: none;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 12px;
+    color: #5F6666;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.02em;
+    
+    /* Neutral / 700 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+    margin-right: 10px;
+}

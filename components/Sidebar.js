@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import classes from './Sidebar.module.css';
+import Link from 'next/link';
 
 export default function Sidebar({handleSidebar}) {
     return (
@@ -13,10 +14,12 @@ export default function Sidebar({handleSidebar}) {
                     <Image src="/images/svg/view.svg" alt="view" width={32} height={32} />
                     <div className={classes.sidebar_box_title}>View mode</div>
                 </div>
+                <Link href="/habits">
                 <div className={classes.sidebar_box}>
                     <Image src="/images/svg/hashtag.svg" alt="habits" width={32} height={32} />
                     <div className={classes.sidebar_box_title}>Habits</div>
                 </div>
+                </Link>
                 <div className={classes.sidebar_box}>
                     <Image src="/images/svg/export.svg" alt="workout" width={32} height={32} />
                     <div className={classes.sidebar_box_title}>Workout plans</div>

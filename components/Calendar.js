@@ -38,7 +38,7 @@ export default function Calender({date}) {
                     count === 7 ? count = 1 : count++;
                     console.log(count);
                     return (i + 1) === new Date().getDate() ? (
-                    <div className={`${classes.day} ${classes.today}`} key={i + 1}>{i + 1}</div>
+                    <div className={`${classes.day}`} key={i + 1}><span className={classes.today}>{i + 1}</span></div>
                 ) : (
                     <div className={classes.day} key={i}>{i + 1}</div>
                 )})}
