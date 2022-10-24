@@ -47,6 +47,7 @@
     border-radius: 8px;
     padding: 4px;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .workout_box_title {
@@ -89,4 +90,98 @@
     border-radius: 4px;
     margin-right: 10px;
 
+}
+
+.box_editworkout {
+    border: 1px solid #5F6666;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin-bottom: 8px;
+    row-gap: 14px;
+}
+
+.box_editworkout_row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.editworkout_title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.02em;
+    
+    color: #000000;
+    margin-right: 10px;
+}
+
+.dropdown {
+    width: 200px;
+    height: 20px;
+
+    border: none;
+    outline: none;
+    background: #EAEBEB;
+
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: 0.02em;
+
+    /* Neutral / 700 */
+
+    color: #5F6666;
+    border-radius: 4px;
+}
+
+.editworkout_input {
+    border: none;
+    outline: none;
+    width: 75px;
+    height: 20px;
+    
+    /* Neutral / 300 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    
+    /* Neutral / 700 */
+    
+    color: #5F6666;
+}
+
+.editworkout_input_new {
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 20px;
+    
+    /* Neutral / 300 */
+    
+    background: #EAEBEB;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    
+    /* Neutral / 700 */
+    
+    color: #5F6666;
 }

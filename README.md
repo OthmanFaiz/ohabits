@@ -22,6 +22,6 @@ It is a simple app that allows me to track my daily activities and habits.
     - [ ] add functionality to the habit
 - [ ] workout setting page
     - [x] add a new workout
-    - [ ] edit a workout
+    - [x] edit a workout
     - [ ] delete a workout
     - [ ] add functionality to the workout
