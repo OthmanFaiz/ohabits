@@ -25,3 +25,4 @@ It is a simple app that allows me to track my daily activities and habits.
     - [x] edit a workout
     - [ ] delete a workout
     - [ ] add functionality to the workout
+- [ ] connect with prostgresql
