@@ -1,0 +1,137 @@
+.container {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+    /* Neutral/50 */
+    
+    background: #FCFCFC;
+    /* Neutral/100 */
+    
+    border: 2px solid #FCFBFB;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.login_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+
+    /* Primary/900 */
+
+    color: #1E0C02;
+    margin: 0 auto;
+}
+
+.login_form_input {
+    background: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    gap: 6px;
+}
+
+.login_form_input_text {
+    border: none;
+    outline: none;
+    height: 36px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16px;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    
+    color: #000000;
+    
+}
+
+.login_form_button_primary {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 120% */
+    
+    
+    /* Neutral / 50 */
+    border: none;
+    outline: none;
+    color: #FCFCFC;
+    padding: 10px;
+    gap: 8px;
+    
+    width: 375px;
+    height: 42px;
+    
+    /* Primary/500 */
+    
+    background: #F2600C;
+    border-radius: 4px;
+}
+
+.login_form_line {
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    margin: 20px 0;
+}
+
+.login_form_button {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 120% */
+    
+    
+    /* Neutral / 50 */
+    border: none;
+    outline: none;
+    color: #181919;
+    padding: 10px;
+    
+    width: 375px;
+    height: 42px;
+    
+    /* Primary/500 */
+    
+    background: #FDE7DA;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.text_input {
+    width: 100%;
+}
+
+.login_form_forgot {
+    margin-top: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 117% */
+    
+    letter-spacing: 0.08em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    
+    color: #000000;
+    
+}

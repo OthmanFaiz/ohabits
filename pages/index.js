@@ -9,9 +9,12 @@ import Habits from '../components/Habits'
 import Workout from '../components/Workout'
 import Calendar from '../components/Calendar'
 import Sidebar from '../components/Sidebar'
+import Login from '../components/Login'
 
 export default function Home() {
-      const [habits, setHabits] = useState([
+    const [login, setLogin] = useState(false)
+
+    const [habits, setHabits] = useState([
         { name: 'Reading', done: false }, 
         { name: 'Learn Dutch', done: false },
         { name: 'Fast Typing', done: false },
@@ -94,13 +97,13 @@ export default function Home() {
       </Head>
       <Header handleSidebar={handleSidebar} />
       <div className={classes.container}>
-      {!showSidebar && 
-      <>
+      {!showSidebar & login ? 
+      (<>
         <Dateform handleCalendar={handleCalendar} date={date} done={done} />
         {showCalendar && <Calendar date={date} />}
         <Habits habits={habits} todos={todos} handleHabit={handleHabit} handleTodo={handleTodo} addTodo={addTodo} noteHandler={noteHandler} handleRate={handleRate} />
         <Workout workout={workout} handleWorkout={handleWorkout} />
-      </>
+      </>) : !showSidebar & !login ? <Login /> : null
         }
         {showSidebar && <Sidebar />}
         </div>
